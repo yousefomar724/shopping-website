@@ -196,17 +196,17 @@ img{
     display: inline-block;
     background-color: var(--first-color);
     color: var(--white-color);
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     font-size: var(--small-font-size);
     font-weight: var(--font-semi);
-    border-radius: 5px;
+    border-radius: 40px;
     transition: .3s;
 }
 
 .btn:hover{background-color: var(--first-color-alt);}
 
 /* Collections */
-.collection__container{row-gap: 2rem;}
+.collection__container{row-gap: 2rem;margin-top: 2rem;}
 
 .collection__box{
     display: flex;
@@ -345,6 +345,7 @@ img{
     outline: none;
     border: none;
     background-color: var(--gray-color);
+    border-radius: 40px;
     padding: 0 1rem;
 }
 
@@ -415,3 +416,81 @@ img{
 .footer__copy:hover{color: var(--white-color);}
 
 /* Media Queries */
+/* For Desktop */
+@media screen and (min-width: 768px){
+    body{margin: 0;}
+
+    .section-all{margin-bottom: var(--mb-4);}
+
+    .nav{
+        height: calc(var(--header-height) + 1rem);
+        justify-content: initial;
+    }
+
+    .nav__menu{margin-left: auto;}
+
+    .nav__cart{margin-left: var(--mb-4);}
+
+    .nav__list{display: flex;}
+
+    .nav__item{
+        margin-left: var(--mb-4);
+        margin-bottom: 0;
+    }
+
+    .nav__toggle{display: none;}
+
+    /* Home */
+    .home__container{height: 100vh;}
+
+    .home__data{
+        padding: 0;
+        height: max-content;
+        align-self: center;
+    }
+
+    .home__title{
+        line-height: .8;
+        letter-spacing: 1.5rem;
+    }
+
+    .home__img{width: 370px;}
+
+    .collection__container{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .collection__box{padding: .5rem 3rem 0;}
+
+    .collection__img{width: 130px;}
+
+    /* Featured */
+    .featured__container, .sponsors__container, .footer__container{grid-template-columns: repeat(4,1fr);}
+
+    /* Offer */
+    .offer__data{padding: 5rem 0;}
+
+    /* New */
+    .new__container{grid-template-columns: repeat(3,1fr);}
+
+    /* Newsletter */
+    .newsletter__form{
+        width: 400px;
+        margin: 0 auto;
+    }
+
+    /* Footer */
+    .footer__container{padding: 2rem 0;}
+}
+
+@media screen and (min-width: 1024px){
+    .bd-grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home__data{padding-left: 7rem;}
+
+    .home__img{right: 15%;}
+}
